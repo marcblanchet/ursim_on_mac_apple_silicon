@@ -9,7 +9,7 @@ Therefore these instructions are based on running the Docker image provided by U
 - Install Rosetta on your Mac, which does Intel x86 emulation on ARM:
 	- In Terminal: `softwareupdate --install-rosetta --agree-to-license`
 - Install Docker 
-	- either [Docker Desktop](https://www.docker.com/products/docker-desktop/) for Mac - Apple Silicon. Install and Launch it. No need to have a user.
+	- either [Docker Desktop](https://www.docker.com/products/docker-desktop/) for Mac - Apple Silicon. Install and launch it. (No need to have a user logged into the Docker network)
 	- or in MacOS Terminal> `brew install docker`
 - Create a directory on your mac (example used: "Documents/programs") to be shared with the Docker instance. Learn the importance of this step in the 
 Usage Considerations section below.
