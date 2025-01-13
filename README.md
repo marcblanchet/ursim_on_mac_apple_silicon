@@ -26,9 +26,7 @@ Usage Considerations section below.
 - URSim should show on your VNC client screen.
 
 ## Usage Considerations
-Docker are lightweight ephemeral instances. When a docker instance is terminated (by the user typing Ctrl-C or accidently), all files are gone and cannot be retrieved. When launching a new docker instance, it starts a fresh new one. Therefore, all user files, profiles, state of the software are lost when an instance is terminated. 
-
-To mitigate that, one can add directory sharing between the docker instance and the host (your Mac) or use Docker volumes. The former is what is proposed in these instructions. Therefore, before terminating your docker instance, make sure all the files you need next time are saved in the shared directory (within docker, per the instructions above, this is the /ursim/programs directory).
+Docker are lightweight ephemeral instances. When a docker instance is terminated (by the user typing Ctrl-C or accidently), all files are gone and cannot be retrieved. When launching a new docker instance, it starts a fresh new one. Therefore, all user files, profiles, state of the software are lost when an instance is terminated. To mitigate that, one can add directory sharing between the docker instance and the host (your Mac) or use Docker volumes. The former is what is proposed in these instructions. Therefore, before terminating your docker instance, make sure all the files you need next time are saved in the shared directory (within docker, per the instructions above, this is the /ursim/programs directory).
 
 Instead of using VNC to access the URSim software, a web browser, such as Safari or Chrome, can be used by going to the url: `http://192.168.1.242:6080`. Replace 192.168.1.242 by your IP address.
 
