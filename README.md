@@ -21,7 +21,7 @@ Usage Considerations section below.
 	- the -v argument is to map a directory within the docker with a directory on the mac.
 - now that the URSim software is launched in docker, we access it using a remote screen sharing program VNC.
 - Find the IP address of your Mac: Settings->Wifi (or Network)->Details->TCP/IP->IP Address. Example: 192.168.1.242
-- Run a VNC client. If you don't have one, you can download and install RealVNC Viewer for Desktop for MacOS à https://realvnc.com
+- Run a VNC client. If you don't have one, you can download and install [RealVNC Viewer for Desktop for MacOS](https://www.realvnc.com/en/connect/download/viewer/)
 - in the VNC client, connect to `192.168.1.242:5900`. Replace 192.168.1.242 by your IP address.
 - URSim should show on your VNC client screen.
 
