@@ -30,6 +30,8 @@ Docker are lightweight ephemeral instances. When a docker instance is terminated
 
 Instead of using VNC to access the URSim software, a web browser, such as Safari or Chrome, can be used by going to the url: `http://192.168.1.242:6080`. Replace 192.168.1.242 by your IP address.
 
+Note that if the host computer (your mac) moves to a different network, such as when a laptop is using a different Wifi network, then the IP address changes. Therefore, while your docker may be still running, you will need to find your new IP address and reconnect your VNC client or web browser to that new IP address.
+
 ## More Information
 Additional information for more tailored docker setup is available at the [URSIM docker image information](https://hub.docker.com/r/universalrobots/ursim_e-series)
 
