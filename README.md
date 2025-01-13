@@ -29,3 +29,8 @@ To mitigate that, one can add directory sharing between the docker instance and 
 
 ## More Information
 Additional information for more tailored docker setup are available at the [URSIM docker image information](https://hub.docker.com/r/universalrobots/ursim_e-series)
+
+## Comments
+Please send any comments on these instructions to mailto:marc.blanchet@viagenie.ca or create issues or pull request on this repo.
+
+Thanks to Julie Blanchet and Guillaume Blanchet for hints and testing of these instructions.
