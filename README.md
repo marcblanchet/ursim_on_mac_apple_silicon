@@ -11,8 +11,6 @@ Therefore these instructions are based on running the Docker image provided by U
 - Install Docker 
 	- either [Docker Desktop](https://www.docker.com/products/docker-desktop/) for Mac - Apple Silicon. Install and launch it. (No need to have a user logged into the Docker network)
 	- or in MacOS Terminal> `brew install docker`
-- Create a directory on your mac (example used: "Documents/programs") to be shared with the Docker instance. Learn the importance of this step in the 
-Usage Considerations section below.
 - In the Docker Terminal window (button on the bottom right of the main window) or in the MacOS Terminal if you use brew, type (in one line):
 	- `docker run --rm -it -p 5900:5900 -p 6080:6080 -v "${HOME}/Documents/programs:/ursim/programs" —platform=linux/amd64 universalrobots/ursim_e-series`
 	- the x86 to ARM emulation is done by the underlying Rosetta but we tell Docker 
@@ -26,13 +24,16 @@ Usage Considerations section below.
 - URSim should show on your VNC client screen.
 
 ## Usage Considerations
-Docker are lightweight ephemeral instances. When a docker instance is terminated (by the user typing Ctrl-C or accidently), all files are gone and cannot be retrieved. When launching a new docker instance, it starts a fresh new one. Therefore, all user files, profiles, state of the software are lost when an instance is terminated. To mitigate that, one can add directory sharing between the docker instance and the host (your Mac) or use Docker volumes. The former is what is proposed in these instructions. Therefore, before terminating your docker instance, make sure all the files you need next time are saved in the shared directory (within docker, per the instructions above, this is the /ursim/programs directory).
 
+### Directory Sharing
+Docker are lightweight ephemeral instances. When a docker instance is terminated (by the user typing Ctrl-C or accidently), all files are gone and cannot be retrieved. When launching a new docker instance, it starts a fresh new one. Therefore, all user files, profiles, state of the software are lost when an instance is terminated. To mitigate that, one can add directory sharing between the docker instance and the host (your Mac) or use Docker volumes. The former is what is proposed in these instructions (-v "${HOME}/Documents/programs:/ursim/programs") which maps the Mac directory Documents/programs as /ursim/programs into the docker instance, a directory known by the URSim software. Therefore, before terminating your docker instance, make sure all the files you need next time are saved in the shared directory (within docker, per the instructions above, this is the /ursim/programs directory). One can also put files on the Mac directory (Documents/programs) such as URSim programs and they will be seen by the URSim simulator in the docker instance.
+
+### VNC vs HTTP
 Instead of using VNC to access the URSim software, a web browser, such as Safari or Chrome, can be used by going to the url: `http://192.168.1.242:6080`. Replace 192.168.1.242 by your IP address.
 
 Note that if the host computer (your mac) moves to a different network, such as when a laptop is using a different Wifi network, then the IP address changes. Therefore, while your docker may be still running, you will need to find your new IP address and reconnect your VNC client or web browser to that new IP address.
 
-## MacOSX Version
+### MacOSX Version
 This procedure seemed to work on MacOSX Sonoma 14.2, but the URSim software hang. On that laptop running MacOSX Sonoma, we upgraded it to MacOSX Sequoia 15.2 and without reinstalling anything, it just worked.
 
 ## More Information
