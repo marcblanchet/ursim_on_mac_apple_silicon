@@ -32,6 +32,9 @@ Instead of using VNC to access the URSim software, a web browser, such as Safari
 
 Note that if the host computer (your mac) moves to a different network, such as when a laptop is using a different Wifi network, then the IP address changes. Therefore, while your docker may be still running, you will need to find your new IP address and reconnect your VNC client or web browser to that new IP address.
 
+## MacOSX Version
+This procedure seemed to work on MacOSX Sonoma 14.2, but the URSim software hang. On that laptop running MacOSX Sonoma, we upgraded it to MacOSX Sequoia 15.2 and without reinstalling anything, it just worked.
+
 ## More Information
 Additional information for more tailored docker setup is available at the [URSIM docker image information](https://hub.docker.com/r/universalrobots/ursim_e-series)
 
