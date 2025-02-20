@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+    ursim_e-series:
+        container_name: ursim
+        environment:
+            - ROBOT_MODEL=UR10
+        ports:
+            - '5900:5900'
+            - '6080:6080'
+            - '29999:29999'
+            - '30003:30003'
+            - '30004:30004'
+            - '502:502'
+            - '2222:22'
+        volumes:
+        - "/programs:/ursim/programs"
+        image: universalrobots/ursim_e-series

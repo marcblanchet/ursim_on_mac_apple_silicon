@@ -42,6 +42,9 @@ Additional information for more tailored docker setup is available at the [URSIM
 ## Virtual Machine Version
 We tried to make a VM version, without luck. Only [UTM](https://getutm.app) was able to do emulation with Rosetta, following these [instructions](https://docs.getutm.app/advanced/rosetta/). We also tried the [Debian preconfigured VM for Rosetta](https://mac.getutm.app/gallery/debian-12-rosetta) and installed URSim and adjusting many parameters in the script, again without luck. It almost worked, as Polyscope loaded but freezed, most likely because URControl crashed. We think it could be possible to make it run under a VM, but software being binary, it is like a black box and difficult to troubleshoot. It would be easier if Universal Robots update its software for modern environments. 
 
+## Docker Compose
+terryc on discord Universal Robots channel shared its docker compose file, which is copied [here](docker-compose.yml). However, we haven't tested it.
+
 ## Comments
 Please send any comments on these instructions to mailto:marc.blanchet@viagenie.ca or create issues or pull request on this repo.
 
